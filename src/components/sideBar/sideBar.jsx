@@ -29,9 +29,9 @@ export default function SideBar() {
         <div className="sideBarItem">
             <span className="sideBarTitle">FOLLOW US</span>
             <div className="sideBarSocial">
-                <i className="sideBarIcon fa-brands fa-facebook-f"></i>
-                <i className="sideBarIcon fa-brands fa-twitter"></i>
-                <i className="sideBarIcon fa-brands fa-instagram"></i>
+                <a href="https://www.facebook.com" style={{textDecoration:"none", color:"inherit"}}><i className="sideBarIcon fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" style={{textDecoration:"none", color:"inherit"}}><i className="sideBarIcon fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" style={{textDecoration:"none", color:"inherit"}}><i className="sideBarIcon fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </div>

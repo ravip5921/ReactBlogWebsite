@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 import "./post.css"
 export default function Post() {
+    const post_id = 12;
   return (
     <div className='post'>
         <img className='postImage'
@@ -13,7 +15,8 @@ export default function Post() {
             <span className="postCat">Science</span>
         </div> 
         <span className="postTitle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <Link to="{{'Post ' + post_id}}" style={{textDecoration:"none", color:"inherit"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Link>
+            
         </span>
         <hr />
         <span className='postDate'>Time stamp</span>
