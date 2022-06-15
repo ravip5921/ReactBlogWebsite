@@ -21,6 +21,12 @@
     align-items: center;
 }
 
+.sideBarDes{
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .sideBarTitle{
     margin: 10px;
     padding: 5px;

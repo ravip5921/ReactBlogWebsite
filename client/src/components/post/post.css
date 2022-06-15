@@ -18,6 +18,13 @@
     align-items: center;
 }
 
+.postInfoTop{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+
 .postCat{
     font-family: "Varela Round", sans-serif;
     font-size: 12px;
@@ -47,15 +54,16 @@ font-size: 11px;
 }
 
 .postDes {
-    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 200;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 24px;
     color: #444444;
     margin-top: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: justify;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp:4;
     -webkit-box-orient: vertical;
 }

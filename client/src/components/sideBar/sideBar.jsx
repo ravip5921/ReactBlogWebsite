@@ -11,11 +11,11 @@ export default function SideBar() {
                 src="https://images.pexels.com/photos/91224/pexels-photo-91224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Person">
             </img>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequatur delectus cum quibusdam veniam voluptatem quos
+            <p className='sideBarDes'>
+                I’m Ravi Pandey, a computer engineering student, who is eager to complete the degree and be a professional as soon as possible. I am the developer of this blog site...... well I just follwoed along a great tutorial from the website, but I guess that still counts as a begineer's project. I can help you or your organization improve productivity through my workshops, consulting, or keynote speeches. I’m passionate about communication and your success is my business.
             </p>
         </div>
-        <div className="sideBarItem">
+        {/* <div className="sideBarItem">
             <span className="sideBarTitle">CATEGORIES</span>
             <ul className="siderBarList">
                 <li className="sideBarListItem">LIFE</li>
@@ -25,9 +25,9 @@ export default function SideBar() {
                 <li className="sideBarListItem">ENTERTAINMENT</li>
                 <li className="sideBarListItem">ART</li>
             </ul>
-        </div>
+        </div> */}
         <div className="sideBarItem">
-            <span className="sideBarTitle">FOLLOW US</span>
+            <span className="sideBarTitle">FOLLOW ME</span>
             <div className="sideBarSocial">
                 <a href="https://www.facebook.com" style={{textDecoration:"none", color:"inherit"}}><i className="sideBarIcon fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.twitter.com" style={{textDecoration:"none", color:"inherit"}}><i className="sideBarIcon fa-brands fa-twitter"></i></a>
