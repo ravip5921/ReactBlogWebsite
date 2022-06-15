@@ -12,31 +12,31 @@ import Login2 from "./pages/login/login2";
 function App() {
   const currentUser =false;
   return (
-    <Login2/>
-    // <Router>
-    // <TopBar/>
-    // <Switch>
-    //   {/* Homepage */}
-    //   <Route exact path="/" element={<Home />} />
-    //   {/* Posts */}
-    //   <Route path="/posts" element={<Home />} />
+    // <Login/>
+    <Router>
+    <TopBar/>
+    <Switch>
+      {/* Homepage */}
+      <Route exact path="/" element={<Home />} />
+      {/* Posts */}
+      <Route path="/posts" element={<Home />} />
 
-    //   {/* Register for new user only */}
-    //   <Route exact path="/register" element={currentUser? <Home />:<Register/>} />
+      {/* Register for new user only */}
+      <Route exact path="/register" element={currentUser? <Home />:<Register/>} />
 
-    //   {/* Login if user not logged in */}
-    //   <Route exact path="/login" element={currentUser? <Home />:<Login/>} />
+      {/* Login if user not logged in */}
+      <Route exact path="/login" element={currentUser? <Home />:<Login2/>} />
 
-    //   {/* Single Post */}
-    //   <Route exact path="/post/:id" element={<Single/>} />
+      {/* Single Post */}
+      <Route exact path="/post/:id" element={<Single/>} />
 
-    //   {/* New post */}
-    //   <Route exact path="/write" element={currentUser? <Write />:<Login/>} />
+      {/* New post */}
+      <Route exact path="/write" element={currentUser? <Write />:<Login/>} />
 
-    //   {/* User Settings */}
-    //   <Route exact path="/userSettings" element={currentUser? <Settings />:<Login/>} />
-    // </Switch>
-    // </Router>
+      {/* User Settings */}
+      <Route exact path="/userSettings" element={currentUser? <Settings />:<Login/>} />
+    </Switch>
+    </Router>
   );
 }
 

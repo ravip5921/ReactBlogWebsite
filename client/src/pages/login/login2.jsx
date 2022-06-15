@@ -1,24 +1,23 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./login2.css";
 
 export default function Login2() {
   return (
     <>
     <div className='background'>
-        <div className="shape"></div>
-        <div className="shape"></div>
-        <form className="loginform">
-            <label htmlFor="loginInput" className="formLabel">Username</label>
-            <input type="text" className="loginInput" placeholder='Enter your username' />
-            <label htmlFor="loginInput" className="formLabel">Username</label>
-            <input type="text" className="loginInput" placeholder='Enter your username' />
+        <form className="loginForm">
+            <h2 className="title">Log In</h2>
+            <label htmlFor="loginInput" className="formLabel">Enter Email</label>
+            <input type="text" className="loginInput" placeholder='Enter your email' />
+            <label htmlFor="loginInput" className="formLabel">Enter Password</label>
+            <input type="password" className="loginInput" placeholder='Enter your password' />
+            <button className="loginButton">Login</button>
+            {/* <h3 className="registerLabel">New here?</h3> */}
         </form>
-    
     </div>
     <button className="lRegisterButton">
-        Register
-        {/* <Link to="/register" style={{textDecoration:"none", color:"inherit"}}>Register</Link> */}
+        <Link to="/register" style={{textDecoration:"none", color:"inherit"}}>Register</Link>
     </button>
     </>
   )
