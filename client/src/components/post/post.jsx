@@ -1,29 +1,38 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import "./post.css"
-export default function Post() {
-    const post_id = 12;
+export default function Post({post}) {
+    // const PpostF 
   return (
     <div className='post'>
+      {post.photo && (
         <img className='postImage'
-         src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+         src={post.photo}
          alt="Post" />
+      )}
+        
 
      <div className="postInfo">
         <div className="postInfoTop">
-        <div className="postCats">
+        {/* <div className="postCats">
+            {post.categories.map((c) =>(
+               <span className="postCat">{c.name}</span>
+            ))}
             <span className="postCat">Life</span>
             <span className="postCat">Science</span>
-        </div> 
-        <span className='postDate'>Time stamp</span>
+        </div>  */}
+        <span className='postDate'>
+          {new Date(post.createdAt).toDateString()}
+          {/* {post.createdAt} */}
+        </span>
         </div>
         <span className="postTitle">
-          <Link to="{{'Post ' + post_id}}" style={{textDecoration:"none", color:"inherit"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Link>
-            
+          <Link to={`/post/${post._id}`} className="link" style={{textDecoration:"none", color:"inherit"}}>{post.title}</Link>
+          
         </span>
         <hr />
         <span className='postDes'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corporis sapiente officia. Illo totam neque repudiandae delectus nesciunt accusamus in exercitationem reprehenderit! Nesciunt consectetur blanditiis ducimus, placeat aut officiis quaerat.
+            {post.desc}
         </span>
      </div>
     </div>

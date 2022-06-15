@@ -41,3 +41,6 @@ function App() {
 }
 
 export default App;
+
+
+// concurrently "cd api && yarn start" "cd client && yarn start"

@@ -3,6 +3,7 @@ const app =express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const multer = require("multer");
+var cors = require("cors");
 
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
@@ -33,6 +34,7 @@ app.post("/api/upload", upload.single("file"),(req,res) => {
     res.status(200).json("File upload complete.");
 });
 
+app.use(cors());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);

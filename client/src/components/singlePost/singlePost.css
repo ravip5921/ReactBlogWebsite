@@ -44,7 +44,8 @@
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    color: #be9656;
+    font-weight:bold;
+    color: #55380a;
     font-family: "Varela Round", Arial, Helvetica, sans-serif;
 }
 
