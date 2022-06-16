@@ -32,9 +32,12 @@ router.post("/login", async (req, res) => {
 
     const { password, ...others } = user._doc;
 
-    validated? res.status(200).json(others) : 1;
+    return validated? res.status(200).json(others) : 1;
+
+    //LOGIN ATTEMPT WITH INVALID USERNAME CAUSES SYSTEM CRASH
+    // return res.status(200).json(others);
   } catch (err) {
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
 

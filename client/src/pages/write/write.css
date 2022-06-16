@@ -12,6 +12,7 @@
 
 .writeForm {
     position: relative;
+    color: transparent;
 }
 
 .writeFormGroup {
@@ -43,12 +44,13 @@
 }
 
 .writeInput::placeholder {
-    color: rgb(189, 185, 185);
+    color: rgb(97, 95, 95);
     font-weight: 400;
 }
 
 .writeInput:focus {
     outline-style: none;
+    color: rgb(1, 10, 10);
 }
 
 .writeText {

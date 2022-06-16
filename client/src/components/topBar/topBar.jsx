@@ -1,10 +1,17 @@
 import React from "react";
+import { useContext } from "react";
 import {Link} from 'react-router-dom';
+import { Context } from "../../context/Context";
 import "./topBar.css";
 
 export default function TopBar () 
 {
-    const user = false;
+    const currentUser = useContext(Context);
+    // const { currentUser,dispatch }= useContext(Context);
+    console.log("dfd",currentUser)
+    const handleLogout = () =>{
+        currentUser.dispatch({type:"LOGOUT"})
+    };
     return (
         <div className="topBar">
             <div className="topLeft">
@@ -27,19 +34,20 @@ export default function TopBar ()
                     <li className="topListItem">
                         <Link to="/" style={{textDecoration:"none", color:"inherit"}}>CONTACT</Link>
                     </li>
-                    <li className="topListItem">
-                        <Link to="/" style={{textDecoration:"none", color:"inherit"}}>LOG OUT</Link>
+                    <li className="topListItem" onClick={handleLogout}>
+                       {currentUser.user && "LOG OUT"}
                     </li>
                 </ul>
             </div>
 
             <div className="topRight">
-                { user ? (
-                        <img className="topBarImage"
-                src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png"
+                { currentUser.user ? (
+                        <Link to="/userSettings"><img className="topBarImage"
+                // src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png"
+                src= {currentUser.user.profilePic}
                 alt="User">
 
-                </img>
+                </img></Link>
                 ):
                 <ul className="topList">
                 <li className="topListItem">

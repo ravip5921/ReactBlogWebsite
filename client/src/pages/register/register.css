@@ -4,14 +4,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.5)),
+    background: linear-gradient(rgba(8, 104, 128, 0.5),
+            rgba(104, 76, 76, 0.5)),
         url("https://images.pexels.com/photos/3707669/pexels-photo-3707669.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-size: cover;
 }
 
 .registerTitle {
     font-size: 50px;
+    color: aliceblue;
 }
 
 .registerForm {
@@ -29,6 +30,8 @@
     background-color: white;
     border: none;
     border-radius: 10px;
+    color: aliceblue;
+    font-size: 15px;
 }
 
 .registerInput:focus {
@@ -56,4 +59,16 @@
     border: none;
     color: white;
     border-radius: 10px;
+}
+
+.errorText{
+    color: azure;
+    font-size: 20px;
+    margin-top: 1%;
+}
+
+.registerIpLabel{
+    color: azure;
+        font-size: 20px;
+        margin-top: 1%;
 }
