@@ -12,7 +12,6 @@ import { Context } from "./context/Context";
 
 function App() {
   const currentUser = useContext(Context);
-  console.log("sdfs" ,currentUser)
   return (
     
     <Router>

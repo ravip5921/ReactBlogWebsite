@@ -8,7 +8,7 @@ export default function TopBar ()
 {
     const currentUser = useContext(Context);
     // const { currentUser,dispatch }= useContext(Context);
-    console.log("dfd",currentUser)
+    // console.log("dfd",currentUser)
     const handleLogout = () =>{
         currentUser.dispatch({type:"LOGOUT"})
     };
